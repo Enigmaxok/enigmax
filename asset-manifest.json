@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/enigmax/static/css/main.4f5d7207.css",
-    "main.js": "/enigmax/static/js/main.413f3521.js",
+    "main.js": "/enigmax/static/js/main.2e93b14d.js",
     "static/js/453.28b19c7f.chunk.js": "/enigmax/static/js/453.28b19c7f.chunk.js",
     "static/media/fondo-ladrillo.jpg": "/enigmax/static/media/fondo-ladrillo.1de9f263eb587ea5da71.jpg",
     "static/media/detective-contacto2.png": "/enigmax/static/media/detective-contacto2.afaf8dedb7d3bd520618.png",
@@ -30,11 +30,11 @@
     "static/media/slick.woff": "/enigmax/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/enigmax/index.html",
     "main.4f5d7207.css.map": "/enigmax/static/css/main.4f5d7207.css.map",
-    "main.413f3521.js.map": "/enigmax/static/js/main.413f3521.js.map",
+    "main.2e93b14d.js.map": "/enigmax/static/js/main.2e93b14d.js.map",
     "453.28b19c7f.chunk.js.map": "/enigmax/static/js/453.28b19c7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f5d7207.css",
-    "static/js/main.413f3521.js"
+    "static/js/main.2e93b14d.js"
   ]
 }
