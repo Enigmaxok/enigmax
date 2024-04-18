@@ -1,0 +1,94 @@
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  
+ 
+  }
+  
+  h1 {
+    margin: 0;
+    width: 25%;  
+  }
+  .menu-icon {
+    display: none; /* Ocultar el menú hamburguesa cuando la pantalla es más grande */
+  }
+  .links {
+    flex-grow: 1; 
+    text-align: center; 
+  }
+ 
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;  
+  }
+  
+  li {
+    margin-right: 10px;  
+    cursor: pointer;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+ 
+/* Media query para estilos específicos cuando el ancho de la pantalla es menor a 600px */
+@media only screen and (max-width: 750px) {
+    .brand {
+     
+    }
+  
+    .links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      position: absolute;
+      top: 62px;
+      right: 0;
+ 
+ 
+    }
+  
+    .links.show {
+        display: block;
+        background-color: #333;
+      }
+  
+    ul {
+      list-style: none;
+ 
+ 
+      padding: 0;
+      display: flex;
+      flex-direction: column; 
+      text-align: left;
+    }
+  
+    li {
+       
+      margin-right: 0; /* Eliminar el margen entre elementos en el modo hamburguesa */
+      margin-bottom: 20px; /* Agregar margen inferior entre elementos en el modo hamburguesa */
+    }
+ .header{
+  justify-content: space-around;
+ }
+    .menu-icon {
+      display:block;
+      text-align: right; 
+      font-size: 1.5rem;      
+    
+    }
+ 
+  }

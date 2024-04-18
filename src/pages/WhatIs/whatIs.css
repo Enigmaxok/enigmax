@@ -1,0 +1,184 @@
+.historia-text{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    margin-left: 2%;
+  
+}
+.historia-text p{
+    font-size: 1.8rem;
+    font-weight: 200
+    
+}
+.historia-text h1{
+    font-size: 4rem;
+  
+}
+.historia{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 10%;
+  
+}
+
+.calidad{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 10%;
+  
+}
+.logo-what{
+    display: flex;
+ width: 50%;
+   padding-top: 50px;
+    margin:  0 auto;
+}
+
+.historia img{
+    width: 100%;
+    height: auto;
+}
+.perspectiva-ctn{
+    color: aliceblue;
+    margin-top: 150px;
+}
+.perspectiva-ctn h1{
+    font-size: 5rem;
+    width: fit-content;
+}
+.perspectiva-ctn h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+.title-perspectiva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     
+}
+.contenido-perspectiva{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  margin: 50px auto 50px auto ;
+  width: 85%;
+
+}
+.contenido-perspectiva .card{
+    background: none;  
+    width: 50%;
+ 
+}
+
+.contenido-perspectiva .card h3 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.contenido-perspectiva .card p {
+ width: fit-content;
+font-weight: 200;
+text-align: center;
+font-size: 1.5rem;
+}
+.calidad-text{
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    width: 50%;
+    margin-left: 2%;
+  
+}
+
+.calidad-text p{
+    font-size: 1.8rem;
+    font-weight: 200
+    
+}
+.calidad-text h1{
+    font-size: 4rem;
+    width: fit-content;
+  
+}
+.que-experiencias{
+    display: flex ;
+    flex-direction: row;
+ justify-content: center;
+ 
+}
+@media (max-width: 1500px) {
+    .calidad{
+  
+        margin-top: 20%;
+     
+       }
+}
+
+@media (max-width: 950px) {
+ 
+    .historia-text h1{
+        font-size: 2rem;
+    }
+    
+    .historia-text p{
+        font-size: 1.5rem;
+      
+    }
+    .historia img{
+        display: none;
+    }
+    .title-perspectiva h1{
+        font-size: 2rem;
+    }
+    .title-perspectiva h3{
+        font-size: 1.5rem;
+        margin-left: 5%;
+    }
+    .contenido-perspectiva{
+        flex-direction: column;
+    }
+  
+    .contenido-perspectiva .card h3{
+        font-size: 2rem;
+        margin-top: 100px;
+        }
+        .contenido-perspectiva .card img{
+            width: 30%;
+             
+            }
+   .contenido-perspectiva .card p{
+   font-size: 1.2rem;
+   }
+   .contenido-perspectiva .card{
+    width: 80%;
+   }
+   .historia-text{
+    width: 100%;
+   }
+   .calidad-text{
+    width: 100%;
+    margin-top: -50px;
+    margin-bottom: 50px;
+   }
+   .calidad-text h1{
+    font-size: 2rem;
+   }
+   .calidad-text p{
+    font-size: 1.2rem;
+   }
+   .calidad img{
+    display: none;
+   }
+  }
+
+
+ 

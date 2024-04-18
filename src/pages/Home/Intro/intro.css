@@ -1,0 +1,88 @@
+.intro-container{
+    display: flex;
+ 
+ 
+}
+ .intro-text p{
+    color: aliceblue;
+ }
+.intro-container p {
+    color: aliceblue;
+    font-size: 2rem; /* Tamaño de fuente relativo en rem */
+ 
+    height: auto;
+    margin-top: -8%;
+  margin-left: -5%;  }
+  
+ .text-container{
+  width: 60%;
+ }
+ 
+  .detective-container {
+    margin-right: 20px; 
+    margin-top: 50px;
+ 
+  }
+  
+  .quien-container {
+    margin-left:30%; 
+    margin-top: 50px;
+  }
+  .detective-image {
+    width: 170%; /* Ancho relativo para el detective */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+  
+  /* Estilos para la imagen de Quién Asesino */
+  .quien-image {
+    width: 70%; /* Ancho relativo para Quién Asesino */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+
+  .intro-container button {
+    border: solid 3px rgba(0, 0, 0, 0.507);
+    border-radius: 20px;
+    background: #FFCC00;
+    font-size: 2.5rem; /* Tamaño de fuente relativo */
+    font-weight: bold;
+    padding: 1rem 3rem; /* Padding relativo */
+    margin-left: 8%;
+  }
+   
+@media (max-width: 1280px) {
+  .intro-container p{
+   font-size: 1.5rem;  
+   margin-top: -20px
+  }
+  .detective-image{
+width: 140%;   
+margin-top: 50px;
+}
+.intro-container button {
+  font-size: 1.5rem; 
+  padding: 1rem 2rem; 
+}
+  }
+
+  @media (max-width: 768px) {
+    .intro-container button {
+      font-size: 1.5rem; 
+      padding: 1rem 2rem; 
+     
+      margin: 0 -50px;
+    }
+    .detective-image{
+      display: none;
+    }
+     .quien-container{
+ 
+    }
+    .quien-image{
+      width: 250px;
+      margin-left: -50px;
+    }
+    .text-container{
+      width: 100%;
+      margin-left: -15%;
+     }
+  }

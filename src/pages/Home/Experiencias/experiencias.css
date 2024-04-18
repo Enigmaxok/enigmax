@@ -1,0 +1,24 @@
+.experiencias-container h2{
+    font-size: 3rem;
+    color: aliceblue;
+    text-align: center;
+    margin-bottom: 150px;
+}
+ 
+  .custom-slider {
+    width:80%;
+ margin:   auto;
+ 
+  }
+  
+ .slider{
+    width:80%;
+    margin: 0  auto;
+ }
+ .custom-slider .slick-slide {
+    text-align: center; /* Centrar el contenido de cada tarjeta */
+  }
+
+  .experiencias-container{
+ 
+  }
