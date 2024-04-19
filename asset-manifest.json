@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/enigmax/static/css/main.f1da245d.css",
-    "main.js": "/enigmax/static/js/main.4526a9d4.js",
+    "main.css": "/enigmax/static/css/main.ca54a39a.css",
+    "main.js": "/enigmax/static/js/main.ff54809a.js",
     "static/js/453.28b19c7f.chunk.js": "/enigmax/static/js/453.28b19c7f.chunk.js",
     "static/media/fondo-ladrillo.jpg": "/enigmax/static/media/fondo-ladrillo.1de9f263eb587ea5da71.jpg",
     "static/media/detective-contacto2.png": "/enigmax/static/media/detective-contacto2.afaf8dedb7d3bd520618.png",
@@ -15,8 +15,8 @@
     "static/media/contacto-detective.webp": "/enigmax/static/media/contacto-detective.1dc61834495bb56b14f2.webp",
     "static/media/historia.jpg": "/enigmax/static/media/historia.93e41527f57e1e5eaf0f.jpg",
     "static/media/sabru.png": "/enigmax/static/media/sabru.fe7e48107aa03e6273ac.png",
-    "static/media/calidad-img.webp": "/enigmax/static/media/calidad-img.c1c3c1d116e5a8222a1a.webp",
     "static/media/quien-asesino.svg": "/enigmax/static/media/quien-asesino.b76c733cc694ca810d216df88726ab0c.svg",
+    "static/media/se-parte.jpg": "/enigmax/static/media/se-parte.e91c568f7275287f6220.jpg",
     "static/media/Logo.png": "/enigmax/static/media/Logo.3c1be021137a48f27298.png",
     "static/media/logo-what.webp": "/enigmax/static/media/logo-what.a92b6315e3597406b920.webp",
     "static/media/logo.svg": "/enigmax/static/media/logo.f396b82217108444446f869b5b6006fe.svg",
@@ -25,12 +25,12 @@
     "static/media/slick.ttf": "/enigmax/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/enigmax/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/enigmax/index.html",
-    "main.f1da245d.css.map": "/enigmax/static/css/main.f1da245d.css.map",
-    "main.4526a9d4.js.map": "/enigmax/static/js/main.4526a9d4.js.map",
+    "main.ca54a39a.css.map": "/enigmax/static/css/main.ca54a39a.css.map",
+    "main.ff54809a.js.map": "/enigmax/static/js/main.ff54809a.js.map",
     "453.28b19c7f.chunk.js.map": "/enigmax/static/js/453.28b19c7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1da245d.css",
-    "static/js/main.4526a9d4.js"
+    "static/css/main.ca54a39a.css",
+    "static/js/main.ff54809a.js"
   ]
 }
