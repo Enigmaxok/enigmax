@@ -6,16 +6,19 @@ const HowToPlay = ( ) => {
       <div className="how-to-play-container">
         <h2><span className="highlightedTitle">¿Cómo</span> se juega?</h2>
         {howToPlayData.map((step, index) => (
-          <div key={index} className={`how-to-play-step ${index % 2 === 0 ? 'image-alternate' : ''}`}>
-            <div className="step-content">
-              <div className={`step-title-container ${index % 2 === 0 ? 'title-alternate' : 'title-normal'}`}>
-                <h3 className="step-title">{step.title}</h3>
-              </div>
-              <p>{step.description}</p>
-            </div>
-            <img src={step.icon} alt={step.title} />
-          </div>
-        ))}
+  <div  >
+    <div className={index % 2 === 0 ? 'row' : 'row-reverse'} key={index}  >+
+    <div className={index % 2 === 0 ? 'title-ctn' : 'title-ctn-reverse'}>
+      <h3>{step.title}</h3>,
+    </div>
+      <img src={step.icon} alt={step.title} />
+    </div>
+    <div className='how-to-description'>
+
+    <p>{step.description}</p>
+    </div>
+  </div>
+))}
       </div>
     );
   };
