@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/enigmaxok.github.io/enigmax/static/css/main.b10bbecd.css",
+    "main.css": "/enigmaxok.github.io/enigmax/static/css/main.d1cf3f96.css",
     "main.js": "/enigmaxok.github.io/enigmax/static/js/main.b339b768.js",
     "static/js/453.28b19c7f.chunk.js": "/enigmaxok.github.io/enigmax/static/js/453.28b19c7f.chunk.js",
     "static/media/fondo-ladrillo.jpg": "/enigmaxok.github.io/enigmax/static/media/fondo-ladrillo.1de9f263eb587ea5da71.jpg",
@@ -25,12 +25,12 @@
     "static/media/slick.ttf": "/enigmaxok.github.io/enigmax/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/enigmaxok.github.io/enigmax/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/enigmaxok.github.io/enigmax/index.html",
-    "main.b10bbecd.css.map": "/enigmaxok.github.io/enigmax/static/css/main.b10bbecd.css.map",
+    "main.d1cf3f96.css.map": "/enigmaxok.github.io/enigmax/static/css/main.d1cf3f96.css.map",
     "main.b339b768.js.map": "/enigmaxok.github.io/enigmax/static/js/main.b339b768.js.map",
     "453.28b19c7f.chunk.js.map": "/enigmaxok.github.io/enigmax/static/js/453.28b19c7f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b10bbecd.css",
+    "static/css/main.d1cf3f96.css",
     "static/js/main.b339b768.js"
   ]
 }
