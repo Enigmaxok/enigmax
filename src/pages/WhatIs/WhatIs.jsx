@@ -4,6 +4,7 @@ import Perspectiva from './Perspectiva';
 import Calidad from './Calidad';
 import Experiencias from './Experiencias';
 import logo from '../../assets/images/logo-what.webp'
+import Potenciar from './Potenciar';
 import './whatIs.css'
 const WhatIs = () => {
   return (
@@ -11,8 +12,8 @@ const WhatIs = () => {
     <img className='logo-what' src={logo} alt="logo enigmax" />
       <Historia/>
       <Perspectiva/>
+      <Potenciar/>
       <Calidad/>
-  
     </div>
   );
 };

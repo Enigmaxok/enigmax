@@ -53,5 +53,17 @@ font-weight: 600;
             }
   }
 
+  @media (max-width: 768px) {
+ 
+    .card{
+        width: 250px;
+        margin: 100px auto 0 auto;
+    }
+  }
 
-  
+  @media (max-width: 490px) {
+ 
+    .card{
+      margin: 80px auto;
+    }
+  }
