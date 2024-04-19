@@ -74,8 +74,8 @@ margin-top: 50px;
     .detective-image{
       display: none;
     }
-     .quien-container{
- 
+    .text-container p{
+      width: 110%;
     }
     .quien-image{
       width: 250px;
@@ -84,5 +84,6 @@ margin-top: 50px;
     .text-container{
       width: 100%;
       margin-left: -15%;
+      margin-top: 25px;
      }
   }

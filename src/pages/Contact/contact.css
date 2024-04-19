@@ -1,6 +1,7 @@
 .contact-ctn{
   display: flex;
   flex-direction: row;
+   
  
 }
 .form-container {
@@ -83,13 +84,14 @@
 
   .form-container button img {
  
-     margin-top: -6%;
-     margin-left: -7%;
+     margin-top: -30px;
+     margin-left: -30px;
   }
 
   button h3 {
  font-size: 2rem;
     margin-top: 0;
+   
 
  }
 
@@ -99,11 +101,17 @@
   .form-container {
     width: 80%;
   }
+  .contact-ctn{
+    margin-bottom: 30px;
+    }
 }
 
 
 @media (max-width: 786px) {
   .contact-detective img {
    display: none;
+  }
+  .contact-ctn{
+  margin-bottom: 30px;
   }
 }
