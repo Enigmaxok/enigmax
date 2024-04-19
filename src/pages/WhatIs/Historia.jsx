@@ -4,10 +4,10 @@ import './whatIs.css'
 const Historia = () => {
   return (
     <div  className='historia'>
-        <div>
+     
 
-    <img src={historia} alt="" />
-        </div>
+    <img src={historia} alt="historia" />
+    
     <div className='historia-text'>
     <h1>Historia</h1>
     <p>Enigmax nace de la colaboración entre dos amigos, Mariano y Sebastian, con un

@@ -1,215 +1,313 @@
-.historia-text{
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-    width: 50%;
-    margin-left: 2%;
-  
+.historia-text {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  width: 50%;
+  margin-left: 2%;
 }
-.historia-text p{
-    font-size: 1.8rem;
-    font-weight: 200
-    
+.cohete-mobile{
+    display: none;
 }
-.historia-text h1{
-    font-size: 3rem;
-    border-bottom: 8px solid #b25fcc;
-  
+.historia-text p {
+  font-size: 1.8rem;
+  font-weight: 200;
 }
-.historia{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 10%;
-  
+.potenciar .calidad-text p{
+    font-weight: 350;
+ }
+.historia-text h1 {
+  font-size: 3rem;
+  border-bottom: 8px solid #b25fcc;
 }
-
-.calidad{
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-    width: 80%;
-    margin-top: 10%;
-  
-}
-.logo-what{
-    display: flex;
- width: 50%;
-   padding-top: 50px;
-    margin:  0 auto;
+.historia {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 10%;
 }
 
-.historia img{
+.calidad {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin: 15% auto 0 auto;
+  width: 80%;
+}
+.potenciar{
     width: 100%;
-    height: auto;
+    
+    background: whitesmoke;
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 15% auto 0 auto; 
 }
-.perspectiva-ctn{
-    color: aliceblue;
-    margin-top: 150px;
+.potenciar h1, .potenciar span, .potenciar p{
+    color: black;
 }
-.perspectiva-ctn h1{
-    font-size: 5rem;
-    width: fit-content;
+.calidad-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width: 350px;
+  height: 300px;
 }
-.perspectiva-ctn span{
-    border-bottom: 8px solid #b25fcc;
+.logo-what {
+  display: flex;
+  width: 40%;
+  padding-top: 50px;
+  margin: 0 50% 0 25%;
 }
- 
-.perspectiva-ctn h3{
-    font-size: 1.8rem;
-    font-weight: 400;
-}
-.title-perspectiva{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-     
-}
-.contenido-perspectiva{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  margin: 50px auto 50px auto ;
-  width: 85%;
 
+.historia img {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  margin-top: 1%;
+  width: 50%;
 }
-.contenido-perspectiva .card{
-    background: none;  
-    width: 50%;
- 
+.perspectiva-ctn {
+  color: aliceblue;
+  margin-top: 150px;
+}
+.perspectiva-ctn h1 {
+  font-size: 5rem;
+  width: fit-content;
+}
+.perspectiva-ctn span {
+  border-bottom: 8px solid #b25fcc;
+}
+
+.perspectiva-ctn h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.title-perspectiva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenido-perspectiva {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 50px auto 50px auto;
+  width: 85%;
+}
+.contenido-perspectiva .card {
+  background: none;
+  width: 60%;
 }
 
 .contenido-perspectiva .card h3 {
-    text-align: center;
-    font-size: 3rem;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .contenido-perspectiva .card p {
- width: fit-content;
-font-weight: 200;
-text-align: center;
-font-size: 1.5rem;
+  width: fit-content;
+  font-weight: 200;
+  text-align: center;
+  font-size: 1.5rem;
 }
-.calidad-text{
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
-    width: 50%;
-    margin-left: 2%;
-    
-  
+.calidad-text {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  width: 60%;
+  margin-left: -10%;
 }
 
-.calidad-text p{
-    font-size: 1.8rem;
-    font-weight: 200
-    
+.calidad-text p {
+  font-size: 1.8rem;
+  font-weight: 200;
 }
-.calidad-text h1{
-    font-size: 4rem;
-    width: fit-content;
+.calidad-text h1 {
+  font-size: 4rem;
+  width: fit-content;
 }
 
-.calidad-text span{
-    border-bottom: 8px solid #b25fcc;
+.calidad-text span {
+  border-bottom: 8px solid #b25fcc;
 }
-.que-experiencias{
-    display: flex ;
-    flex-direction: row;
- justify-content: center;
- 
+.que-experiencias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 @media (max-width: 1500px) {
-    .calidad{
-  
-        margin-top: 20%;
-     
-       }
+  .calidad {
+    margin-top: 25%;
+  }
+  .potenciar{
+    margin-top: 25%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calidad {
+    margin-top: 30%;
+  }
+
+  .potenciar{
+    margin-top: 30%;
+  }
+}
+@media (max-width: 1300px) {
+  .historia-text p,
+  .calidad-text p {
+    font-size: 1.5rem;
+  }
+
+  .calidad-text h1,
+  .calidad-text span {
+    font-size: 3rem;
+  }
+  .calidad-img {
+    width: 280px;
+  }
+
+  .historia img {
+    margin-left: -50px;
+    width: 450px;
+    margin-top: 2%;
+  }
 }
 
 @media (max-width: 950px) {
- 
-    .historia-text h1{
-        font-size: 3rem;
-        border-bottom: 8px solid #b25fcc;
-    }
-    
-    .historia-text p{
-        font-size: 1.5rem;
-      
-    }
-    .historia img{
+    .potenciar .calidad-img{
         display: none;
     }
-    .title-perspectiva h1{
-        font-size: 3rem;
+    .potenciar-flex{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .potenciar-flex h1{
+      width: 50%;
+      margin-left: 12%;
+      font-size: 2.5rem;
        
     }
-    .title-perspectiva {
- width: 78%;
-   align-items:start;
-   margin: 0 auto;
+
+    .potenciar-flex span{
+       
+        font-size: 2.5rem;
+      }
     
-    }
- 
-    .title-perspectiva span{
-        font-size: 3rem;
-        border-bottom: 8px solid #b25fcc;
-    }
-    .title-perspectiva h3{
-        font-size: 1.5rem;
-        
-    }
-    .contenido-perspectiva{
-        flex-direction: column;
-    }
+    .potenciar-flex img{
+        width: 200px;
+      }
+  .logo-what {
+    width: 60%;
+    padding-top: 50px;
+    margin: 0 50% 0 15%;
+  }
+  .cohete-mobile{
+    display:block;
   
-    .contenido-perspectiva .card h3{
-        font-size: 2rem;
-        margin-top: 100px;
-        }
-        .contenido-perspectiva .card img{
-            width: 30%;
-             
-            }
-   .contenido-perspectiva .card p{
-   font-size: 1.2rem;
-   }
-   .contenido-perspectiva .card{
-    width: 80%;
-   }
-   .historia-text{
-    width: 100%;
-   }
-   .calidad-text{
-    width: 100%;
-    margin-top: -190px;
-    margin-bottom: 50px;
-   }
-   .calidad-text h1{
+}
+
+  .calidad {
+    flex-direction: column-reverse;
+  }
+  .historia img,
+  .calidad img {
+    width: 80vw;
+    margin: 50px auto 50px auto;
+  }
+  .historia {
+    flex-direction: column-reverse;
+  }
+  .historia-text h1 {
     font-size: 3rem;
-   }
-   .calidad-text p{
-    font-size: 1.2rem;
-   }
-   .calidad img{
-    display: none;
-   }
+    border-bottom: 8px solid #b25fcc;
+  }
+  
+  .historia-text p,
+  .calidad-text p {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 50px auto 0 auto;
+   
   }
 
+  .title-perspectiva h1 {
+    font-size: 3rem;
+  }
+  .title-perspectiva {
+    width: 78%;
+    align-items: start;
+    margin: 0 auto;
+  }
 
-  @media (max-width: 450px) {
- 
-     .calidad-text{
+  .title-perspectiva span {
+    font-size: 3rem;
+    border-bottom: 8px solid #b25fcc;
+  }
+  .title-perspectiva h3 {
+    font-size: 1.5rem;
+  }
+  .contenido-perspectiva {
+    flex-direction: column;
+  }
+
+  .contenido-perspectiva .card h3 {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+  .contenido-perspectiva .card img {
+    width: 30%;
+    margin-bottom: 15%;
+  }
+  .contenido-perspectiva .card p {
+    font-size: 1.5rem;
+  }
+  .contenido-perspectiva .card {
+    width: 80%;
+  }
+  .historia-text {
     width: 100%;
-    margin-top: -100px;
-    margin-bottom: 50px;
-   }
+  }
+  .calidad-text {
+    width: 100%;
     
+    margin-bottom: 50px;
+    margin-left: 1%;
+  }
+  .calidad .calidad-text h1 {
+    font-size: 3rem;
+  }
+}
 
+@media (max-width: 650px) {
+  .contenido-perspectiva .card p {
+    font-size: 1.3rem;
+  }
+  .contenido-perspectiva .card img {
+    margin-bottom: 5%;
+  }
+  .potenciar{
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .calidad-text {
+    width: 100%;
+   
+  }
+  .potenciar-flex img {
+    width: 150px;
+    margin-right: -30px;
+}
+  .contenido-perspectiva .card img {
+    margin-bottom: -5%;
+  }
 }

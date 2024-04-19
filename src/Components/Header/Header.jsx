@@ -1,43 +1,42 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './header.css';
-import logo from "../../assets/images/logo.svg";
+import logo from '../../assets/images/logo.svg';
 
 const Header = () => {
   const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
+  const [activeMenuItem, setActiveMenuItem] = useState('');
 
   const closeMenu = () => {
     setShowMenu(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Agrega un evento para cambiar la clase del header cuando se hace scroll
-  window.onscroll = () => {
-    const header = document.querySelector('.header');
-    if (header) {
-      if (window.pageYOffset > 0) {
-        header.classList.add('sticky');
-      } else {
-        header.classList.remove('sticky');
-      }
-    }
+  const handleMenuItemClick = (path) => {
+    navigate(path);
+    closeMenu();
+    setActiveMenuItem(path);
   };
 
   return (
     <div className={`header ${showMenu ? 'showMenu' : ''}`}>
       <div className='brand'>
-        <img src={logo} alt="" />
+        <img src={logo} alt='' />
       </div>
       <div className={`menu-icon ${showMenu ? 'show' : ''}`} onClick={() => setShowMenu(!showMenu)}>
-        &#8801;
+        <div className='icono-ham'>{showMenu ? '✕' : '☰'}</div>
       </div>
       <div className={`links ${showMenu ? 'show' : ''}`}>
         <nav>
           <ul>
-            <li onClick={() => { navigate('/'); closeMenu(); }}>Home</li>
-            <li onClick={() => { navigate('/seccion1'); closeMenu(); }}>¿Qué es Enigmax?</li>
-            <li onClick={() => { navigate('/eventos'); closeMenu(); }}>Eventos</li>
-            <li onClick={() => { navigate('/contacto'); closeMenu(); }}>Contacto</li>
+            <li onClick={() => handleMenuItemClick('/')} className={activeMenuItem === '/' ? 'active' : ''}>Home</li>
+            <div className="linea-separadora"></div> 
+            <li onClick={() => handleMenuItemClick('/seccion1')} className={activeMenuItem === '/seccion1' ? 'active' : ''}>¿Qué es Enigmax?</li>
+            <div className="linea-separadora"></div> 
+            <li onClick={() => handleMenuItemClick('/eventos')} className={activeMenuItem === '/eventos' ? 'active' : ''}>Eventos</li>
+            <div className="linea-separadora"></div> 
+            <li onClick={() => handleMenuItemClick('/contacto')} className={activeMenuItem === '/contacto' ? 'active' : ''}>Contacto</li>
           </ul>
         </nav>
       </div>

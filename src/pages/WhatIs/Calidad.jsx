@@ -1,20 +1,24 @@
-import React from 'react';
-import calidad from '../../assets/images/calidad-img.webp'
-import './whatIs.css'
+import React from "react";
+import calidad from "../../assets/images/se-parte.jpg";
+import "./whatIs.css";
 const Calidad = () => {
   return (
-    <div  className='calidad'>
-        <div>
+    <div className="calidad">
+      <img src={calidad} alt="" className="calidad-img" />
 
-    <img src={calidad} alt="" />
-        </div>
-    <div className='calidad-text'>
-    <h1><span>Calidad</span>  y seriedad</h1>
-    <p>La identidad de marca de Enigmax se concibe para  transmitir robustez, liderazgo
-y confianza. Busca que los clientes perciban la marca como sinónimo de éxito
-asegurado en sus eventos y experiencias. La marca aspira a proyectar una
-imagen sólida y confiable desde el primer contacto.</p>
-    </div>
+      <div className="calidad-text">
+        <h1>
+          Sé parte de <span>Enigmax </span>{" "}
+        </h1>
+        <p>
+          ¡Potenciá tu espacio con Enigmax! Ya sea un bar, restaurante, centro
+          cultural o salón de eventos, ofrecemos soluciones únicas para
+          diferenciarte. Con planes flexibles y servicios personalizados, vas a
+          atraer a nuevos clientes e impulsarás tu negocio. Imaginá tu local
+          lleno de gente disfrutando de una función única ¡Escribinos para
+          ponernos en contacto!
+        </p>
+      </div>
     </div>
   );
 };
