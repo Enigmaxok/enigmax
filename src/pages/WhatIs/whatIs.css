@@ -15,6 +15,9 @@
 .potenciar .calidad-text p{
     font-weight: 350;
  }
+ .potenciar .calidad-text  {
+    margin-top: 2%;
+ }
 .historia-text h1 {
   font-size: 3rem;
   border-bottom: 8px solid #b25fcc;
@@ -34,7 +37,7 @@
   position: relative;
   flex-direction: row-reverse;
   justify-content: space-around;
-  margin: 15% auto 0 auto;
+  margin: 5% auto 0 auto;
   width: 80%;
 }
 .potenciar{
@@ -143,7 +146,7 @@
 }
 @media (max-width: 1500px) {
   .calidad {
-    margin-top: 25%;
+    margin-bottom: 5%;
   }
   .potenciar{
     margin-top: 25%;
@@ -152,7 +155,7 @@
 
 @media (max-width: 1200px) {
   .calidad {
-    margin-top: 30%;
+     
   }
 
   .potenciar{
@@ -190,7 +193,7 @@
         flex-direction: row;
     }
     .potenciar-flex h1{
-      width: 50%;
+      width: 60%;
       margin-left: 12%;
       font-size: 2.5rem;
        
