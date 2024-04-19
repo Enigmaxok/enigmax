@@ -9,7 +9,7 @@ const Perspectiva = () => {
     <div className='perspectiva-ctn'>
         <div className='title-perspectiva'>
 
-      <h1>Nuestra Perspectiva</h1>
+      <h1><span>Nuestra</span> Perspectiva</h1>
       <h3>Enigmax se caracteriza desde sus fundamentos en 3 ejes.</h3>
         </div>
       <div className='contenido-perspectiva'>

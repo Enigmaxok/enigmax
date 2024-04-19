@@ -94,6 +94,11 @@
     .lista li{
        font-size: 1.3rem;
     }
+    .center-img {
+ 
+    width:300px;
+   
+     }
    }
    
   @media (max-width: 786px) {
@@ -114,7 +119,7 @@
  .title h1{
     font-size: 2rem;
 }
-
+ 
 }
 
 @media (max-width: 550px) {
