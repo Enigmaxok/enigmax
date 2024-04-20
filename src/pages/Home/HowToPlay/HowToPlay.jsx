@@ -1,5 +1,5 @@
 import React from 'react';
-import howToPlayData from './constants'; // Ajusta la ruta de importación según sea necesario
+import howToPlayData from './constants';
 import './how.css'
 const HowToPlay = ( ) => {
     return (

@@ -7,6 +7,7 @@ const Eventos = () => {
       <div className="title">
         <h1>Contrataciones</h1>
         <div className="border"></div>
+        <p>Llevá Enigmax a tu evento y sorprendé a todos con nuestras propuestas lúdicas e inmersivas.</p>
       </div>
 
       <div className="modalidad">

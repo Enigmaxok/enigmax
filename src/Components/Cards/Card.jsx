@@ -3,7 +3,8 @@ import './card.css'
 const Card = ({ imagen, nombre, texto }) => {
   return (
     <div className="card">
-      <img src={imagen} alt={nombre} />
+      
+      <img src={imagen} alt={nombre} className='imagen-redonda' />
       <div className="card-body">
         <h3>{nombre}</h3>
         <p>{texto}</p>
