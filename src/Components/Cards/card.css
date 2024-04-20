@@ -49,7 +49,8 @@ font-weight: 600;
         margin-top: -45%;
     }
     .card img{
-     width: 60%;
+ width: 150px;
+ height: 150px;
     }
     .card-body h3{
         font-size: 18px;
@@ -62,6 +63,10 @@ font-weight: 600;
   }
 
   @media (max-width: 768px) {
+    .card-body h3{
+       margin-top:50px ;
+
+        }
  
     .card{
         width: 250px;
