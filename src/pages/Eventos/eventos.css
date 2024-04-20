@@ -1,0 +1,176 @@
+.eventos-ctn{
+ 
+ 
+}
+
+
+.title h1{
+    padding-top: 50px;
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 3.5rem;
+    color: aliceblue;
+}
+.eventos-ctn .border{
+    margin: 50px auto;
+    width: 10%;
+    border-bottom: solid  5px #B25FCC;
+    margin-top: 0; 
+}
+
+.modalidad{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.modalidad h1{
+    width:fit-content;
+    margin-left: 5%;
+    color: aliceblue;
+    font-size: 2.5rem;
+   
+}
+
+.modalidad p{
+   color: aliceblue;
+   font-size: 1.5rem;
+  
+   width: 90%;
+   margin: 50px 0 0 30px  ;
+}
+ 
+ 
+  .center-img   {
+ 
+   width: 30%;
+   margin: 10% auto 0 auto;
+
+  }
+  .center-img  img {
+ 
+   width: 100%;
+ 
+
+  }
+.mixta {
+    width: 35%;
+    background: #B25FCC;
+    border-radius: 0 15px 15px 0;
+    height: 70px;
+
+}
+
+.fija{
+    width: 35%;
+    background: #B25FCC;
+    border-radius:   15px 0 0 15px  ;
+    height: 70px;
+
+}
+ 
+ 
+  @media (max-width: 1280px) {
+ 
+ 
+     .fija h1, .mixta h1{
+        font-size: 2rem;
+        margin-bottom: 20%;
+     }
+     .modalidad p{
+
+      font-size: 1.2rem;
+   
+   }
+
+   .center-img   {
+ 
+  
+      margin: 15% auto -2px auto;
+   
+     }
+   }
+   @media (max-width: 1030px) {
+ 
+    .center-img   {
+       margin: 25% auto -2px auto;
+      }
+    }
+    
+   @media (max-width: 920px) {
+ 
+    .center-img {
+ 
+    width:400px;
+margin-top: 0;  
+     }
+.modalidad{
+   flex-direction: column;
+}
+
+     .eventos-ctn{
+      display: flex;
+      flex-direction: column;
+  }
+  .mixta, .fija {
+   background: #B25FCC;
+   width:95%;
+   background: none;
+   border-radius: 0 15px 15px 0;
+   height: fit-content;
+   
+}
+ 
+ .eventos-colored-title{
+   background: #B25FCC;
+   width: 80%;
+   border-radius:0  15px 15px 0;
+    
+ }
+
+.fija h1, .mixta h1{
+  height: 45px;
+   
+}
+.fija p, .mixta p{
+  margin-top: -90px;
+  margin-bottom: 25px;
+}
+   }
+   
+  @media (max-width: 786px) {
+ .mixta h1{
+    font-size: 1.5rem;
+    margin-bottom: 20%;
+ }
+ .fija h1{
+    font-size: 1.5rem;
+    margin-bottom: 20%;
+ }
+ 
+ 
+ .title h1{
+    font-size: 2rem;
+}
+.fija p, .mixta p{
+   margin-top: -50px;
+   margin-bottom: 55px;
+ }
+ .center-img {
+ 
+   width: 400px; /* Ancho original de la imagen */
+   /* Altura deseada de la imagen (la mitad del alto original) */
+ 
+    }
+}
+
+@media (max-width: 550px) {
+ .center-img{
+  width: 250px;
+ }
+ 
+ .lista {
+    margin-left: 25px;
+ }
+   
+   }
