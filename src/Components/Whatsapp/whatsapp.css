@@ -1,0 +1,28 @@
+.wsp-icon {
+   
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;  
+    z-index: 999;  
+    cursor: pointer;
+}
+
+.wsp-icon img{
+    width: 90px;
+}
+
+
+@media (max-width: 768px) {
+    .wsp-icon {
+   
+        position: fixed;
+        bottom: 20px;  
+        right: 20px;  
+        z-index: 999;  
+        cursor: pointer;
+    }
+    .wsp-icon img{
+        width: 60px;
+    }
+    
+}

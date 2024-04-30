@@ -1,10 +1,10 @@
 import React from "react";
-import calidad from "../../assets/images/se-parte.jpg";
+import calidad from "../../assets/images/se-parte.webp";
 import "./whatIs.css";
 const Calidad = () => {
   return (
     <div className="calidad">
-      <img src={calidad} alt="" className="calidad-img" />
+      <img src={calidad} alt="" className="calidad-img" style={{marginTop:'40px'}}/>
 
       <div className="calidad-text">
         <h1>

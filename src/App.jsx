@@ -6,19 +6,25 @@ import ContactForm from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import Eventos from "./pages/Eventos/Eventos";
 import WhatIs from "./pages/WhatIs/WhatIs";
+import Whatsapp from "./Components/Whatsapp/Whatsapp";
+import CreateEvent from "./Components/Eventos/CreateEvent";
 const App = () => {
+ 
   return (
     <div  className="app-container">
+ 
         <div className="background-container" />
     <Router>
+    <Whatsapp/>
         <Header />
 
         <div className="content-container">
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/seccion1" element={<WhatIs/>} />
-            <Route path="/eventos" element={<Eventos/>} />
+            <Route path="/eventos" element={<Eventos />} />
             <Route path="/contacto" element={<ContactForm />} />
+            <Route path="/createEvent" element={<CreateEvent />} />
           </Routes>
         </div>
         <Footer />

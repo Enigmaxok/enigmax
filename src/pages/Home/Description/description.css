@@ -27,7 +27,7 @@
  
   .portrait-container {
     position: relative;
-    width: 200px;
+    width: 180px;
     height: 230px;
     background-color: #fff;
     transform: rotate(8deg);
@@ -58,11 +58,14 @@
   }
   
   .portrait-image {
-    width: 70%;
+    width: 145px;
     background-color: rgb(211, 211, 211);
     height: 70%;
     margin-top: 15px;
-    padding: 0 15px;
+     
+    
+    
+ 
   }
 
   .highlighted-title {
@@ -96,7 +99,7 @@
     }
  
     .portrait-container {
-      width: 150px;
+      width: 170px;
       height: 200px;
     }
     .title-container{

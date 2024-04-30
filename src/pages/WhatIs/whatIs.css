@@ -184,6 +184,9 @@
 }
 
 @media (max-width: 950px) {
+  .calidad .calidad-img{
+    width: 350px;
+  }
     .potenciar .calidad-img{
         display: none;
     }
@@ -304,6 +307,11 @@
 }
 
 @media (max-width: 450px) {
+
+ 
+    .calidad .calidad-img{
+      width: 300px;
+    }
   .calidad-text {
     width: 100%;
    

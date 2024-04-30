@@ -1,0 +1,33 @@
+.create-event-container{
+    color: aliceblue;
+  width: 80%;
+  margin: 50px auto 0 auto;
+}
+
+ .mapa-create{
+   height: 60vh;
+   width: 95%;
+ }
+
+.createEvent input{
+   width: 250px;
+}
+
+.createEvent button{
+    width: 250px;
+ }
+ .create-event-container .crear-button{
+   width: 95%;
+   margin-top: 25px;
+   height: 50px;
+ }
+ .lista-eventos ul{
+    display: flex;
+    flex-direction: column;
+ }
+ .key-ctn{
+   height: 70vh;
+ }
+
+
+ 

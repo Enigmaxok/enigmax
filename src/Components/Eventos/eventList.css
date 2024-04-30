@@ -1,0 +1,95 @@
+.lista-eventos {
+    font-family: Arial, sans-serif;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .select-container {
+    margin-bottom: 20px;
+  }
+  
+  .select-container label {
+    margin-right: 10px;
+ 
+  }
+  
+  .select-container select {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  th {
+ 
+  }
+  
+  tr:hover {
+    background-color: rgb(178, 95, 204);
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .lista-eventos select {
+    padding: 8px;
+    width: 250px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Oculta el estilo nativo del select en algunos navegadores */
+  }
+  
+  .lista-eventos select:hover {
+    border-color: #007bff;
+  }
+  
+  .lista-eventos select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
+  }
+  
+  .lista-eventos option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .lista-eventos option:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .lista-eventos option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
