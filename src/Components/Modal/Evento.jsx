@@ -20,7 +20,7 @@ const Evento = ({ selectedLocation }) => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://wwww.enigmax.com.ar/api/eventos');
+        const response = await axios.get('https://www.enigmax.com.ar/api/eventos');
         const eventosConColor = response.data.map((evento, index) => ({
           ...evento,
           color: coloresEvento[index % coloresEvento.length],

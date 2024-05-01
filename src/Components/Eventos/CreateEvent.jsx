@@ -65,7 +65,7 @@ const CreateEvent = ({ onEventCreate }) => {
 
       try {
         const response = await axios.post(
-          "http://wwww.enigmax.com.ar/api/eventos",
+          "https://www.enigmax.com.ar/api/eventos",
           newEvent
         );
         console.log("Respuesta del servidor:", response.data);
