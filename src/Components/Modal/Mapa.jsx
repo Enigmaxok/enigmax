@@ -28,7 +28,7 @@ const Mapa = ({ onNext }) => {
     setMap(mapInstance);
 
     // Agregar marcador de usuario al mapa
-    const userMarker = L.marker([0, 0]).addTo(mapInstance);
+    const userMarker = L.marker([0, 0], { icon: customIcon }).addTo(mapInstance);
     userMarker.bindPopup('Tu ubicación').openPopup();
     userMarkerRef.current = userMarker;
 
@@ -36,7 +36,19 @@ const Mapa = ({ onNext }) => {
       mapInstance.remove();
     };
   }, []);
-
+  useEffect(() => {
+    if (map && selectedLocation) {
+      // Encuentra las coordenadas de la ubicación seleccionada
+      const selectedEvent = events.find((event) => event.lugar === selectedLocation);
+      if (selectedEvent) {
+        const parsedCoordenadas = JSON.parse(selectedEvent.coordenadas);
+        const selectedLatLng = L.latLng(parsedCoordenadas[0], parsedCoordenadas[1]);
+  
+        // Centra el mapa en la ubicación seleccionada
+        map.setView(selectedLatLng, 13);
+      }
+    }
+  }, [map, selectedLocation, events]);
   useEffect(() => {
     const fetchEvents = async () => {
       try {

@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css"; // Importa los estilos de Leaflet
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "./createEvent.css";
 import EventList from "./EventList";
-
+import iconMarker from '../../assets/images/location.svg'
 const CreateEvent = ({ onEventCreate }) => {
   const [eventName, setEventName] = useState("");
   const [eventDescription, setEventDescription] = useState("");
@@ -19,6 +19,14 @@ const CreateEvent = ({ onEventCreate }) => {
   const [accessKey, setAccessKey] = useState('');
   const [accessKeyVerified, setAccessKeyVerified] = useState(false);
   const [showAlert, setShowAlert] = useState(false); // Nuevo estado para controlar la alerta
+
+  const customIcon = L.icon({
+    iconUrl: iconMarker,  
+    iconSize: [32, 32],  
+    iconAnchor: [16, 32], 
+   
+  });
+
   const verificarAcceso = async () => {
     try {
       const response = await axios.post('https://www.enigmax.com.ar/api/access-key/validate', {
@@ -183,7 +191,7 @@ const CreateEvent = ({ onEventCreate }) => {
           >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             {selectedLocation && (
-              <Marker position={selectedLocation}>
+              <Marker position={selectedLocation} icon={customIcon}>
                 <Popup>Ubicación del evento</Popup>
               </Marker>
             )}
