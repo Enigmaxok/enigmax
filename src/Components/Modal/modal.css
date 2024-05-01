@@ -7,6 +7,7 @@
     background-color: rgba(0, 0, 0, 0.836);
     display: flex;
     justify-content: center;
+    z-index: 999;
     align-items: center;
   }
   
@@ -49,7 +50,13 @@
 }
   
  
- 
+.polygon-1 {
+  clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 78%);
+}
+
+.polygon-2 {
+  clip-path: polygon(100% 80%, 0% 90%, 0% 0%, 100% 10%);
+}
   .modal-body button{
     cursor: pointer;
     font-size: 14px;
@@ -109,16 +116,21 @@ color: aliceblue;
     align-items: center;
     justify-content: center;
   }
- 
+  
  .expanded-content p{
     font-size: 18px;
-    display: flex;
+ 
     justify-content:center;
     text-align: center;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
   
  }
+ 
+
+.descripcion {
+  word-wrap: break-word; /* Rompe las palabras largas para que quepan dentro del contenedor */
+}
  .expanded-content button{
      display: flex;
     margin: 15px auto 0 auto;
@@ -137,6 +149,7 @@ color: aliceblue;
  flex-direction: row;
  
  }
+ 
  .fecha-hora h1{
 background-color: #B25FCC;
 color: aliceblue;
@@ -164,3 +177,31 @@ padding: 5px;
     .expanded-content {
       padding: 10px;
     }
+
+
+
+    @media only screen and (max-width: 650px) {
+  
+      .modal-body {
+     
+        width: 95%;
+        overflow-y: scroll;
+        margin: 0 auto;
+
+      }
+      .evento-ctn  {
+         width: 95%;
+         margin: 0 auto;
+         padding: 2px;
+ 
+      }
+      .detective-evento{
+        height: 90px;
+     }
+     .quien-evento  {
+      height: 80px;
+  
+     }
+    }
+
+ 
