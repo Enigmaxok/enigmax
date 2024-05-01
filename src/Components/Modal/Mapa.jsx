@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import './modal.css';
-
+import iconMarker from '../../assets/images/location.svg';
 const Mapa = ({ onNext }) => {
   const [map, setMap] = useState(null);
   const [events, setEvents] = useState([]);
@@ -12,7 +12,12 @@ const Mapa = ({ onNext }) => {
   const [userLocation, setUserLocation] = useState(null);
   const [locationError, setLocationError] = useState(null);
   const userMarkerRef = useRef(null);
-
+  const customIcon = L.icon({
+    iconUrl: iconMarker,  
+    iconSize: [32, 32],  
+    iconAnchor: [16, 32], 
+   
+  });
   useEffect(() => {
     const mapInstance = L.map('map').setView([-34.6037, -58.3816], 13);
     const bounds = L.latLngBounds([-34.7052, -58.5291], [-34.5221, -58.3169]);
@@ -97,7 +102,7 @@ const Mapa = ({ onNext }) => {
     for (const event of events) {
       if (event.lugar === location) {
         const parsedCoordenadas = JSON.parse(event.coordenadas);
-        const marker = L.marker(parsedCoordenadas).addTo(map);
+        const marker = L.marker(parsedCoordenadas, { icon: customIcon }).addTo(map);  
         marker.bindPopup(`<b>${event.nombre}</b><br />${event.descripcion}`);
         marker.on('click', () => {
           setSelectedEvent(event);
