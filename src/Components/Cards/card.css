@@ -22,7 +22,7 @@
 }
 .card-body{
     padding: 20px 35px;
-    margin-top: -35%;
+    margin-top: -45%;
 }
 .card-body h3{
     font-size: 22px;
@@ -32,6 +32,7 @@
 .card-body p{
 font-size: 18px;
 font-weight: 600;
+margin-top: -35px;
 }
 @media (max-width: 1700px) {
     .card{

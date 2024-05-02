@@ -59,7 +59,7 @@
   margin: 0 70px;
  }
 .row img, .row-reverse img{
-  width: 130px;
+  width: 120px;
  margin-top: -15px;
   z-index: 22;
   border: solid 18px#b25fcc;
@@ -144,7 +144,7 @@
         
      }
      .row img, .row-reverse img{
-      width: 120px;
+      width: 100px;
     
      }
   
@@ -172,7 +172,7 @@
    .how-to-description p{
     font-size: 1.3rem;
    
-    margin-top: -100px;
+    margin-top: -80px;
    }
    .how-to-description-reverse p{
     font-size: 1.3rem;

@@ -62,9 +62,7 @@
     background-color: rgb(211, 211, 211);
     height: 70%;
     margin-top: 15px;
-     
-    
-    
+  
  
   }
 
@@ -97,10 +95,17 @@
       font-size: 1.5rem; 
       padding: 1rem 2rem; 
     }
- 
+    .portrait-image {
+      width: 125px;
+      background-color: rgb(211, 211, 211);
+      height: 120px;
+      margin-bottom: 15px;
+    
+   
+    }
     .portrait-container {
-      width: 170px;
-      height: 200px;
+      width: 150px;
+      height: 180px;
     }
     .title-container{
       width: 80%;
