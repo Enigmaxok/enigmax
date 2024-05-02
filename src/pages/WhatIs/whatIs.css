@@ -9,7 +9,7 @@
     display: none;
 }
 .historia-text p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 200;
 }
 .potenciar .calidad-text p{
@@ -71,16 +71,16 @@
 .historia img {
   display: flex;
   justify-content: center;
-  height: 50%;
+  height: 45%;
   margin-top: 1%;
-  width: 50%;
+  width: 45%;
 }
 .perspectiva-ctn {
   color: aliceblue;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 .perspectiva-ctn h1 {
-  font-size: 5rem;
+  font-size: 3.5rem;
   width: fit-content;
 }
 .perspectiva-ctn span {
@@ -110,14 +110,14 @@
 
 .contenido-perspectiva .card h3 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .contenido-perspectiva .card p {
   width: fit-content;
   font-weight: 200;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 .calidad-text {
   display: flex;
@@ -128,11 +128,11 @@
 }
 
 .calidad-text p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 .calidad-text h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   width: fit-content;
 }
 
@@ -165,15 +165,16 @@
 @media (max-width: 1300px) {
   .historia-text p,
   .calidad-text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .calidad-text h1,
   .calidad-text span {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
   .calidad-img {
-    width: 280px;
+    width: 300px;
+    height: 250px;
   }
 
   .historia img {
@@ -201,14 +202,16 @@
       font-size: 2.5rem;
        
     }
-
+    .potenciar{
+      margin-top: 10%;
+    }
     .potenciar-flex span{
        
         font-size: 2.5rem;
       }
     
     .potenciar-flex img{
-        width: 200px;
+        width: 190px;
       }
   .logo-what {
     width: 60%;
@@ -238,14 +241,14 @@
   
   .historia-text p,
   .calidad-text p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     width: 90%;
     margin: 50px auto 0 auto;
    
   }
 
-  .title-perspectiva h1 {
-    font-size: 3rem;
+  .title-perspectiva h1, .title-perspectiva span {
+    font-size: 2.8rem;
   }
   .title-perspectiva {
     width: 78%;
@@ -271,10 +274,11 @@
   .contenido-perspectiva .card img {
      width: 110px;
     height: 110px;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
   }
   .contenido-perspectiva .card p {
     font-size: 1.5rem;
+    margin-top: -30px;
   }
   .contenido-perspectiva .card {
     width: 80%;
@@ -289,7 +293,7 @@
     margin-left: 1%;
   }
   .calidad .calidad-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -303,6 +307,11 @@
   }
   .potenciar{
     margin-top: 0;
+  }
+
+  .contenido-perspectiva .card h3 {
+ 
+    margin-top: 50px;
   }
 }
 

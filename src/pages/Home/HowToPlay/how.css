@@ -9,7 +9,7 @@
  }
  .how-to-play-container h3 {
    color: aliceblue;
-   font-size: 2.5rem;
+   font-size: 2.2rem;
   
   
  }
@@ -39,7 +39,7 @@
 .title-ctn{
   background-color: #b25fcc;
   width: 65vw;
-  height: 70px;
+  height: 55px;
   margin-left: -80px;
   border-radius: 10px;
  
@@ -50,7 +50,7 @@
 .title-ctn-reverse{
   background-color: #b25fcc;
   width: 65vw;
-  height: 70px;
+  height: 55px;
   margin-right: -80px;
   border-radius: 10px;
  
@@ -59,7 +59,7 @@
   margin: 0 70px;
  }
 .row img, .row-reverse img{
-  width: 180px;
+  width: 130px;
  margin-top: -15px;
   z-index: 22;
   border: solid 18px#b25fcc;
@@ -85,12 +85,23 @@
  
 .how-to-description{
   width: 70%;
-  margin: -5% auto 10% auto;
+  margin: -7% auto 10% auto;
 }
+.how-to-description-reverse{
+  width: 60%;
+  margin: -7% auto 10% auto;
+}
+.how-to-description-reverse p{
+  font-size: 1.5rem;
+  margin-left: -30px;
+  margin-top: -100px;
+}
+
+
 .how-to-description p{
- font-size: 1.8rem;
- margin-left: 50px;
- margin-top: -80px;
+ font-size: 1.5rem;
+ margin-left: 80px;
+ margin-top: -100px;
 }
 
 
@@ -159,11 +170,15 @@
    }
 
    .how-to-description p{
-    font-size: 1.8rem;
-    margin-left: 0;
-    margin-top: -40px;
-   }
+    font-size: 1.3rem;
    
+    margin-top: -100px;
+   }
+   .how-to-description-reverse p{
+    font-size: 1.3rem;
+   
+    margin-top: -80px;
+   }
  }
  
  
@@ -171,9 +186,17 @@
    .how-to-play-container{
      width: 98%
    }
+   .how-to-play-container h2 {
+    
+    font-size: 2.5rem;
+  
+  }
    .title-ctn,  .title-ctn-reverse{
     height: 50px;
     width: 90%;
+  }
+  .title-ctn-reverse h3{
+ margin-left: 20px;
   }
   .title-ctn h3,  .title-ctn-reverse h3{
    width: 70%;
@@ -189,6 +212,12 @@
     font-size: 1.3rem;
     margin-top: 25px;
   }
+ 
+   .how-to-description-reverse p{
+    font-size: 1.3rem;
+   
+    margin-top: -25px;
+   }
  
   .how-to-play-container img{
     width: 85px

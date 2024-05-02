@@ -8,9 +8,9 @@
 }
  
 .imagen-redonda{
-    width: 140px; /* Ancho de la imagen */
-    height: 140px; /* Altura de la imagen */
-    border-radius: 50%; /* Redondear la imagen al 50% */
+    width: 110px; 
+    height: 110px;  
+    border-radius: 50%;  
     border: solid 8px white;
     
 }
@@ -46,11 +46,11 @@ font-weight: 600;
  
     .card-body{
   
-        margin-top: -45%;
+        margin-top: -35%;
     }
     .card img{
- width: 150px;
- height: 150px;
+ width: 110px;
+ height: 110px;
     }
     .card-body h3{
         font-size: 18px;
@@ -65,13 +65,14 @@ font-weight: 600;
   @media (max-width: 768px) {
     .card-body h3{
        margin-top:50px ;
-
+ 
         }
  
     .card{
         width: 250px;
         margin: 100px auto 0 auto;
     }
+ 
   }
 
   @media (max-width: 490px) {

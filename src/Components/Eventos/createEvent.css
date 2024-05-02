@@ -9,12 +9,21 @@
    width: 95%;
  }
 
+ 
+.input-column{
+  display: flex;
+  flex-direction: column;
+}
 .createEvent input{
-   width: 250px;
+  width: 350px;
+}
+.input-column textarea{
+ width: 350px;
 }
 
 .createEvent button{
     width: 250px;
+    margin-bottom: 15px;
  }
  .create-event-container .crear-button{
    width: 95%;
@@ -31,3 +40,15 @@
 
 
  
+
+ @media only screen and (max-width: 650px) {
+
+ .createEvent input{
+  width: 250px;
+}
+.input-column textarea{
+ width: 250px;
+}
+
+
+ }

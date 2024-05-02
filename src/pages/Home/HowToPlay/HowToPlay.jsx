@@ -13,8 +13,7 @@ const HowToPlay = ( ) => {
     </div>
       <img src={step.icon} alt={step.title} />
     </div>
-    <div className='how-to-description'>
-
+    <div className={index % 2 === 0 ? 'how-to-description' : 'how-to-description-reverse' }>
     <p>{step.description}</p>
     </div>
   </div>
