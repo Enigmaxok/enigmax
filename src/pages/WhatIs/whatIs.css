@@ -48,7 +48,7 @@
         position: relative;
         flex-direction: row;
         justify-content: space-around;
-        margin: 15% auto 0 auto; 
+        margin: 10% auto 0 auto; 
 }
 .potenciar h1, .potenciar span, .potenciar p{
     color: black;
@@ -110,7 +110,7 @@
 
 .contenido-perspectiva .card h3 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .contenido-perspectiva .card p {
@@ -118,6 +118,7 @@
   font-weight: 200;
   text-align: center;
   font-size: 1.4rem;
+  margin-top: -30px;
 }
 .calidad-text {
   display: flex;
@@ -149,7 +150,7 @@
     margin-bottom: 5%;
   }
   .potenciar{
-    margin-top: 25%;
+    margin-top: 15%;
   }
 }
 
@@ -157,9 +158,12 @@
   .calidad {
      
   }
-
+.perspectiva-ctn .card img{
+  width: 85px;
+  height: 85px;
+}
   .potenciar{
-    margin-top: 30%;
+    margin-top: 25%;
   }
 }
 @media (max-width: 1300px) {
@@ -248,7 +252,7 @@
   }
 
   .title-perspectiva h1, .title-perspectiva span {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   .title-perspectiva {
     width: 78%;
@@ -272,8 +276,8 @@
     margin-top: 100px;
   }
   .contenido-perspectiva .card img {
-     width: 110px;
-    height: 110px;
+     width: 80px;
+    height: 80px;
     margin-bottom: 10%;
   }
   .contenido-perspectiva .card p {
