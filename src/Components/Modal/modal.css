@@ -203,8 +203,23 @@
   margin-bottom: -10px;
   overflow-y: scroll;
 }
+.modal-content {
+  position: relative; 
+ 
+}
 
+ 
+ .modal-content .modal-close{
+  background: none; /* Hace que el fondo del botón sea transparente */
+  border: none;
+  font-size: 22px;
+  color: aliceblue;
+  margin-top: 0px;
+ }
 @media only screen and (max-width: 650px) {
+  .expanded-content .valor{
+    margin-top: -30px;
+  }
   .modal-body {
     width: 99%;
     overflow-y: scroll;
@@ -216,6 +231,7 @@
   }
   .fecha-hora p {
     margin-left: -8px;
+   
   }
 
   .fecha-hora {
@@ -240,12 +256,12 @@
   }
   .evento-ctn .descripcion {
     height: 100px;
-    margin-top: -30px;
+ 
 
     overflow-y: scroll;
   }
   .expanded-margin {
-    margin-top: -60px;
+    
   }
   .expanded-margin h1 {
     margin: 5px 0 10px 35px;
@@ -254,4 +270,56 @@
   .expanded-detective {
     margin-top: -25px;
   }
+}
+@media only screen and (max-width:500px) {
+  .evento-ctn {
+     width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.fecha-hora h1, .fecha-hora p {
+  font-size:18px;
+  margin-bottom: 15px;
+  width: 80px;
+}
+.fecha-hora h1 {
+margin-left: 5px;
+}
+.fecha-hora p{
+  margin-left:0;
+  }
+   
+  .modal-content {
+   width: 320px;
+   
+}
+ 
+.expanded-content p{
+  font-size: 14px;
+}
+.quien-evento {
+  width: 80px;
+ 
+  
+}
+.detective-evento{
+ 
+height: 80px;
+margin-top: 25px;
+ 
+  }
+
+  .expanded-detective{
+    margin-top: -20px;
+  }
+
+ 
+  
+}
+
+@media only screen and (max-height:720px) {
+  .modal-content {
+     margin-top: 35%;
+}
 }

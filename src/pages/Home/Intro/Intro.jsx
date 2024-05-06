@@ -29,9 +29,9 @@ const Intro = () => {
         <div className="text-container">
           <p>¡Viví una experiencia teatral única! Resolvé enigmas, interrogá sospechosos y descifra pistas para atrapar al asesino.</p>
         </div>
-        {/* Botón para abrir el modal */}
+       
         <button onClick={openModal}>Reservá tu lugar</button>
-        {/* Renderiza el modal, solo si modalOpen es true */}
+   
         {modalOpen && <Modal isOpen={modalOpen} onClose={closeModal} />}
       </div>
     </div>

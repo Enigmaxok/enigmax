@@ -9,6 +9,10 @@ function Modal({ isOpen, onClose }) {
   const [selectedLocation, setSelectedLocation] = useState(null);
   const [selectedEvent, setSelectedEvent] = useState('');
 
+  const handleClose = () => {
+    document.body.style.overflow = 'auto'; // Restablecer el desbordamiento del cuerpo al cerrar
+    onClose();
+  };
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -51,6 +55,8 @@ function Modal({ isOpen, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        
+      <h3 className="modal-close" onClick={handleClose}>X</h3>
         {pages[currentPage]}
       </div>
     </div>

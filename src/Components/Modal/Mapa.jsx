@@ -138,24 +138,24 @@ const Mapa = ({ onNext }) => {
         map.removeLayer(layer);
       }
     });
-
-    for (const event of events) {
-      if (location === "" || event.lugar === location) {
-        const parsedCoordenadas = JSON.parse(event.coordenadas);
-        const marker = L.marker(parsedCoordenadas, { icon: customIcon }).addTo(
-          map
-        );
-        marker.bindPopup(
-          `<b>${event.nombre}</b><br />  <b>${event.lugar} - ${formatTime(
-            event.hora
-          )}hs</b> <br />  <b>${event.ubicacion}</b>       <br /><b>$${
-            event.valor
-          }</b><br />${event.descripcion}`,
-          {
-            offset: L.point(0, -30), // Offset negativo en la dirección Y para mover el popup hacia arriba
-          }
-        );
-
+for (const event of events) {
+  if (location === "" || event.lugar === location) {
+    const parsedCoordenadas = JSON.parse(event.coordenadas);
+    const marker = L.marker(parsedCoordenadas, { icon: customIcon }).addTo(
+      map
+    );
+    const popupWidth = window.innerWidth > 480 ? 300 : 200; // Cambia el tamaño del popup en función del ancho de la pantalla
+    marker.bindPopup(
+      `<b>${event.nombre}</b><br />  <b>${event.lugar} - ${formatTime(
+        event.hora
+      )}hs</b> <br />  <b>${event.ubicacion}</b>       <br /><b>$${
+        event.valor
+      }</b><br />${event.descripcion}`,
+      {
+        offset: L.point(0, -30), // Offset negativo en la dirección Y para mover el popup hacia arriba
+        maxWidth: popupWidth, // Establece el ancho máximo del popup
+      }
+    );
         marker.on("click", () => {
           setSelectedEvent(event);
           setSelectedLocation(event.lugar);
