@@ -4,12 +4,12 @@
  }
  .how-to-play-container h2 {
    color: aliceblue;
-   font-size: 3rem;
+   font-size: 2.8rem;
    text-align: center;
  }
  .how-to-play-container h3 {
    color: aliceblue;
-   font-size: 2.2rem;
+   font-size: 2.0rem;
   
   
  }
@@ -39,7 +39,7 @@
 .title-ctn{
   background-color: #b25fcc;
   width: 65vw;
-  height: 55px;
+  height: 50px;
   margin-left: -80px;
   border-radius: 10px;
  
@@ -59,7 +59,7 @@
   margin: 0 70px;
  }
 .row img, .row-reverse img{
-  width: 120px;
+  width: 100px;
  margin-top: -15px;
   z-index: 22;
   border: solid 18px#b25fcc;
@@ -94,18 +94,30 @@
 .how-to-description-reverse p{
   font-size: 1.5rem;
   margin-left: -30px;
-  margin-top: -100px;
+  margin-top: 50px;
 }
 
 
 .how-to-description p{
  font-size: 1.5rem;
- margin-left: 80px;
- margin-top: -100px;
+ margin-left: 50px;
+ margin-top:  50px;
 }
 
 
-
+@media (max-width: 1400px) {
+  
+  .how-to-description-reverse p{
+ 
+    margin-top: 10px;
+  }
+  
+  
+  .how-to-description p{
+  
+   margin-top:  -20px;
+  }
+  }
  
  @media (max-width: 1080px) {
    .how-to-play-container{
@@ -115,7 +127,7 @@
    }
    .how-to-play-container h3 {
     
-     font-size: 1.8rem;
+     font-size: 1.6rem;
     
    }
    .how-to-play-container p {
@@ -129,7 +141,7 @@
    }
   
    .title-ctn,  .title-ctn-reverse{
-    height: 50px;
+    height: 40px;
     width: 80%;
   }
  
@@ -144,7 +156,7 @@
         
      }
      .row img, .row-reverse img{
-      width: 100px;
+      width: 90px;
     
      }
   
@@ -171,7 +183,7 @@
 
    .how-to-description p{
     font-size: 1.3rem;
-   
+   margin-left:  50px;
     margin-top: -80px;
    }
    .how-to-description-reverse p{
@@ -188,7 +200,7 @@
    }
    .how-to-play-container h2 {
     
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   
   }
    .title-ctn,  .title-ctn-reverse{
@@ -210,9 +222,13 @@
   }
   .how-to-description p{
     font-size: 1.3rem;
-    margin-top: 25px;
+    margin-top: -50px;
+    margin-left: 80px;
   }
- 
+  .row img, .row-reverse img {
+    width: 60px;
+    height: 80px;
+  }
    .how-to-description-reverse p{
     font-size: 1.3rem;
    

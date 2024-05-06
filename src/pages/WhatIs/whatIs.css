@@ -5,6 +5,10 @@
   width: 50%;
   margin-left: 2%;
 }
+.perspectiva-ctn .card img{
+  width: 85px;
+  height: 85px;
+}
 .cohete-mobile{
     display: none;
 }
@@ -58,8 +62,8 @@
   justify-content: center;
   margin-top: 2%;
   margin-bottom: 5%;
-  width: 320px;
-  height: 280px;
+  width: 300px;
+  height: 260px;
 }
 .logo-what {
   display: flex;
@@ -136,7 +140,7 @@
   font-weight: 200;
 }
 .calidad-text h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   width: fit-content;
 }
 
@@ -222,7 +226,9 @@
       }
     
     .potenciar-flex img{
-        width: 190px;
+        width: 120px;
+        height: 120px;
+        margin-top: 0;
       }
   .logo-what {
     width: 60%;
@@ -251,11 +257,17 @@
     border-bottom: 8px solid #b25fcc;
   }
   
-  .historia-text p,
+  .historia-text p{
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 30px auto 0 auto;
+   
+  }
+
   .calidad-text p {
     font-size: 1.3rem;
     width: 90%;
-    margin: 50px auto 0 auto;
+    margin: 30px auto 0 auto;
    
   }
 
@@ -274,6 +286,7 @@
   }
   .title-perspectiva h3 {
     font-size: 1.5rem;
+    margin-bottom: -30px;
   }
   .contenido-perspectiva {
     flex-direction: column;
@@ -308,7 +321,7 @@
     font-size: 2.5rem;
   }
   .perspectiva-ctn .card{
-  
+  margin-bottom: -50px;
   }
 }
 

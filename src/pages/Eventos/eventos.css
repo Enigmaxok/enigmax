@@ -18,7 +18,7 @@
 }
 .eventos-ctn .border {
   margin: 50px auto;
-  width: 10%;
+  width: 150px;
   border-bottom: solid 5px #b25fcc;
   margin-top: 0;
 }
@@ -90,7 +90,7 @@
 
 @media (max-width: 920px) {
    .title p{
-  
+   width: 80%;
       font-size: 1.2rem;
      
    }

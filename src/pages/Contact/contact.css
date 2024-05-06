@@ -19,7 +19,7 @@
   }
   .form-container h2{
     color: aliceblue;
-    font-size: 4.5rem;
+    font-size: 4.1rem;
     margin-left: 100px;
     
   }
@@ -136,6 +136,7 @@
     margin-right: 8%;
   
      }
+   
   input  {
     
  
@@ -161,6 +162,13 @@
     }
 }
 @media (max-width: 870px) {
+
+     .form-container h2{
+     
+      font-size:3rem;
+    
+      
+    }
   .form-container  {
  
     margin-left: -50%;

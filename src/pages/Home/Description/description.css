@@ -2,8 +2,8 @@
     color: aliceblue;
 }
 .title-container{
-    font-size: 2.4rem;
- width: 980px;
+    font-size: 2.2rem;
+ width: 800px;
  margin: 0 auto;
     
 }
@@ -27,8 +27,8 @@
  
   .portrait-container {
     position: relative;
-    width: 180px;
-    height: 230px;
+    width: 160px;
+    height: 210px;
     background-color: #fff;
     transform: rotate(8deg);
     margin-bottom: 50px;
@@ -58,7 +58,7 @@
   }
   
   .portrait-image {
-    width: 145px;
+    width: 130px;
     background-color: rgb(211, 211, 211);
     height: 70%;
     margin-top: 15px;
@@ -87,7 +87,17 @@
     font-size: 1.3rem;
    
 }
+.portrait-container {
  
+  width: 140px;
+  height: 180px;
+ 
+
+}
+.portrait-image{
+  width: 110px;
+  height: 120px;
+}
   }
  
   @media (max-width: 768px) {
@@ -95,18 +105,8 @@
       font-size: 1.5rem; 
       padding: 1rem 2rem; 
     }
-    .portrait-image {
-      width: 125px;
-      background-color: rgb(211, 211, 211);
-      height: 120px;
-      margin-bottom: 15px;
-    
    
-    }
-    .portrait-container {
-      width: 150px;
-      height: 180px;
-    }
+  
     .title-container{
       width: 80%;
       margin: 0 auto;

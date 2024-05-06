@@ -28,9 +28,9 @@ const CreateEvent = ({ onEventCreate }) => {
     iconAnchor: [16, 32],
   });
   const handleEdit = (event) => {
-    setEditEvent(event); // Establecer el evento en edición
-    // Asignar los datos del evento al formulario de edición
-    setEventIdBeingEdited(event.id); // Guardar el ID del evento en edición
+    setEditEvent(event); 
+ 
+    setEventIdBeingEdited(event.id);  
     setEventName(event.nombre);
     setEventDescription(event.descripcion);
     setEventLugar(event.lugar);
@@ -39,13 +39,41 @@ const CreateEvent = ({ onEventCreate }) => {
     setEventLocation(event.ubicacion);
     setEventTicketLink(event.linkCompra);
     setValor(event.valor);
+ 
   };
+  useEffect(() => {
+    if (editEvent) {
+      handleLocationSearch();  
+    }
+  }, [editEvent]);
+
+
+
   useEffect(() => {
     const storedAccessKey = localStorage.getItem("accessKey");
     if (storedAccessKey) {
       setAccessKey(storedAccessKey);
+      setAccessKeyVerified(true); // Marcar la clave como verificada si está en localStorage
     }
   }, []);
+  useEffect(() => {
+    if (accessKeyVerified) {
+      verificarAcceso(); // Llamar a verificarAcceso solo si la clave está verificada
+    }
+  }, [accessKeyVerified]);
+
+  const handleLogout = () => {
+    localStorage.removeItem("accessKey");
+    setAccessKey("");
+    setAccessKeyVerified(false);
+  };
+
+
+
+
+
+
+
   const verificarAcceso = async () => {
     try {
       const response = await axios.post(
@@ -57,10 +85,7 @@ const CreateEvent = ({ onEventCreate }) => {
       console.log(response.data);
       setAccessKeyVerified(true);
       localStorage.setItem("accessKey", accessKey);
-      setTimeout(() => {
-        localStorage.removeItem("accessKey");
-        setAccessKey("");
-      }, 10 * 60 * 1000); // 10 minutos en milisegundos
+   
     } catch (error) {
       console.error("Error al verificar la clave de acceso:", error);
       alert(
@@ -68,6 +93,9 @@ const CreateEvent = ({ onEventCreate }) => {
       );
     }
   };
+
+
+  
 
   const handleCreateOrUpdateEvent = async () => {
     if (
@@ -164,6 +192,7 @@ const CreateEvent = ({ onEventCreate }) => {
       {accessKeyVerified && (
         <>
           <h2>Crear Evento</h2>
+        
           <div className="createEvent">
             <div className="input-column">
               <input
@@ -246,6 +275,7 @@ const CreateEvent = ({ onEventCreate }) => {
           <div className="lista-eventos">
             <EventList onEditEvent={handleEdit} />
           </div>
+          <button className='crear-button' style={{marginBottom:'50px', width:'250px'}} onClick={handleLogout}>Salir</button>
         </>
       )}
     </div>

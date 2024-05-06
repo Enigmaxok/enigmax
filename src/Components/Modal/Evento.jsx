@@ -25,8 +25,8 @@ const Evento = ({ selectedLocation }) => {
   };
 
   const handleBuyTicketClick = (event) => {
-    event.stopPropagation(); // Detiene la propagación del evento de clic
-    // Coloca aquí la lógica para comprar el boleto
+    event.stopPropagation(); 
+
   };
 
   useEffect(() => {
