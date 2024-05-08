@@ -3,7 +3,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "./modal.css";
 import iconMarker from "../../assets/images/location.svg";
-
+import ubicacion from "../../assets/images/Ubicacion.png";
 const Mapa = ({ onNext }) => {
   const [map, setMap] = useState(null);
   const [events, setEvents] = useState([]);
@@ -17,6 +17,11 @@ const Mapa = ({ onNext }) => {
   const customIcon = L.icon({
     iconUrl: iconMarker,
     iconSize: [32, 32],
+    iconAnchor: [16, 32],
+  });
+  const customIcon2 = L.icon({
+    iconUrl: ubicacion,
+    iconSize: [36, 38],
     iconAnchor: [16, 32],
   });
 
@@ -141,7 +146,7 @@ const Mapa = ({ onNext }) => {
 for (const event of events) {
   if (location === "" || event.lugar === location) {
     const parsedCoordenadas = JSON.parse(event.coordenadas);
-    const marker = L.marker(parsedCoordenadas, { icon: customIcon }).addTo(
+    const marker = L.marker(parsedCoordenadas, { icon: customIcon2 }).addTo(
       map
     );
     const popupWidth = window.innerWidth > 480 ? 300 : 200; // Cambia el tamaño del popup en función del ancho de la pantalla
@@ -150,7 +155,7 @@ for (const event of events) {
         event.hora
       )}hs</b> <br />  <b>${event.ubicacion}</b>       <br /><b>$${
         event.valor
-      }</b><br />${event.descripcion}`,
+      }</b><br /><div style="height: 100px; overflow-y: auto;">${event.descripcion}</div>`,
       {
         offset: L.point(0, -30), // Offset negativo en la dirección Y para mover el popup hacia arriba
         maxWidth: popupWidth, // Establece el ancho máximo del popup
