@@ -153,9 +153,8 @@ for (const event of events) {
     marker.bindPopup(
       `<b>${event.nombre}</b><br />  <b>${event.lugar} - ${formatTime(
         event.hora
-      )}hs</b> <br />  <b>${event.ubicacion}</b>       <br /><b>$${
-        event.valor
-      }</b><br /><div style="height: 100px; overflow-y: auto;">${event.descripcion}</div>`,
+      )}hs</b> <br />  <b>${event.ubicacion}</b>       
+      </b><br /><div style="height: 100px; overflow-y: auto;">${event.descripcion}</div>`,
       {
         offset: L.point(0, -30), // Offset negativo en la dirección Y para mover el popup hacia arriba
         maxWidth: popupWidth, // Establece el ancho máximo del popup

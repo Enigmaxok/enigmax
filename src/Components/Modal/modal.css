@@ -18,7 +18,18 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 7%;
 }
-
+.fecha-hora h3{
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.lugar-par{
+  margin-left: -10px;
+ 
+}
+.lugar-impar{
+  width: 200px;
+}
 .modal-close {
   position: absolute;
   top: 5px;
@@ -118,9 +129,7 @@
   width: 90%;
   margin: 0 auto;
 }
-.expanded-content .valor{
-  margin-top: -30px;
-}
+ 
 .descripcion {
   word-wrap: break-word;
 }
@@ -199,8 +208,9 @@
 
 .evento-ctn .descripcion {
   height: 100px;
- 
-  margin-bottom: -10px;
+  margin-top: -20px;
+  padding: 0 15px;
+  margin-bottom: 15px;
   overflow-y: scroll;
 }
 .modal-content {
@@ -260,9 +270,11 @@
 
     overflow-y: scroll;
   }
-  .expanded-margin {
-    
-  }
+ 
+  .lugar-impar h3,.lugar-par h3{
+
+    font-size: 12px;
+   }
   .expanded-margin h1 {
     margin: 5px 0 10px 35px;
   }
@@ -277,7 +289,18 @@
     margin: 0 auto;
     padding: 0;
 }
+.lugar-par{
+  width: 90px;
+}
+.lugar-impar{
+ 
+ width: 100px;
+ font-size: 14px;
+}
+.lugar-impar h3,.lugar-par h3{
 
+ font-size: 12px;
+}
 .fecha-hora h1, .fecha-hora p {
   font-size:18px;
   margin-bottom: 15px;
@@ -285,6 +308,7 @@
 }
 .fecha-hora h1 {
 margin-left: 5px;
+margin-top: 5px;
 }
 .fecha-hora p{
   margin-left:0;

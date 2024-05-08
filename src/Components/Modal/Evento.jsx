@@ -113,12 +113,18 @@ const Evento = ({ selectedLocation }) => {
                     >
                       <h1>{formatDate(event.fecha)}</h1>
                       <p>{formatTime(event.hora)} hs</p>
+                      <div  className="lugar-par">
+
+                      <h3>{event.lugar}</h3>
+                
+                      </div>
                     </div>
                   </div>
                 </>
               ) : (
             
                 <>
+                
                   <div className="event-images">
                     <div
                       className={`fecha-hora ${
@@ -127,7 +133,15 @@ const Evento = ({ selectedLocation }) => {
                     >
                       <h1>{formatDate(event.fecha)}</h1>
                       <p>{formatTime(event.hora)} hs</p>
+                
+                   <div className="lugar-impar">
+                   <h3 >{event.lugar}</h3>
+            
+                   </div>
+           
                     </div>
+
+                  
                     <img  className={`detective-evento ${
                         selectedEvent === event ? "expanded-detective" : ""
                       }`} src={detective} alt="" />
@@ -141,12 +155,10 @@ const Evento = ({ selectedLocation }) => {
 
             {selectedEvent === event && (
               <div className="expanded-content">
-                <p className="valor">
-                  <strong>${event.valor}</strong>
-                </p>
+            
               
                 <p className="descripcion">
-                  <strong>{event.descripcion}</strong>{" "}
+                  {event.descripcion} 
                 </p>
                 <button onClick={(e) => handleBuyTicketClick(e)}>
                   {" "}
