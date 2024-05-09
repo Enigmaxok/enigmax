@@ -217,8 +217,14 @@
   position: relative; 
  
 }
-
- 
+.lugar-impar p{
+  margin-left: -100px;
+  margin-top: -50px;
+}
+.lugar-par p{
+  margin-left:  -50px;
+  margin-top: -50px;
+}
  .modal-content .modal-close{
   background: none; /* Hace que el fondo del botón sea transparente */
   border: none;

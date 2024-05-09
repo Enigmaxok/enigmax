@@ -8,25 +8,25 @@ const Evento = ({ selectedLocation }) => {
   const [events, setEvents] = useState([]);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+  const [isExpanded, setIsExpanded] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   const handleEventSelect = (event) => {
     setSelectedEvent(selectedEvent === event ? null : event);
+    setIsExpanded(!isExpanded);
   };
 
   const handleBuyTicketClick = (event) => {
-    event.stopPropagation(); 
-
+    event.stopPropagation();
   };
 
   useEffect(() => {
@@ -56,7 +56,7 @@ const Evento = ({ selectedLocation }) => {
 
   const formatDate = (dateString) => {
     const dateObj = new Date(dateString);
-    const day = dateObj.getDate() +1;
+    const day = dateObj.getDate() + 1;
     const month = dateObj.getMonth() + 1;
     const formattedDay = day < 10 ? `0${day}` : day;
     const formattedMonth = month < 10 ? `0${month}` : month;
@@ -89,7 +89,12 @@ const Evento = ({ selectedLocation }) => {
           } ${selectedEvent === event ? "selected" : ""}`}
           style={{
             backgroundColor: event.color,
-            height: selectedEvent === event ? "450px" : (windowWidth < 650 ? "120px" : "150px"),
+            height:
+              selectedEvent === event
+                ? "450px"
+                : windowWidth < 650
+                ? "120px"
+                : "150px",
           }}
           onClick={() => handleEventSelect(event)}
         >
@@ -99,13 +104,17 @@ const Evento = ({ selectedLocation }) => {
                 selectedEvent === event ? "expanded" : ""
               }`}
             >
-              {index % 2 === 0 ? ( 
+              {index % 2 === 0 ? (
                 <>
                   <div className="event-images">
                     <img className="quien-evento" src={quien} alt="" />
-                    <img  className={`detective-evento ${
+                    <img
+                      className={`detective-evento ${
                         selectedEvent === event ? "expanded-detective" : ""
-                      }`} src={detective} alt="" />
+                      }`}
+                      src={detective}
+                      alt=""
+                    />
                     <div
                       className={`fecha-hora ${
                         selectedEvent === event ? "expanded-margin" : ""
@@ -113,18 +122,17 @@ const Evento = ({ selectedLocation }) => {
                     >
                       <h1>{formatDate(event.fecha)}</h1>
                       <p>{formatTime(event.hora)} hs</p>
-                      <div  className="lugar-par">
-
-                      <h3>{event.lugar}</h3>
-                
+                      <div className="lugar-par">
+                        <h3>{event.lugar}</h3>
+                        {selectedEvent === event && (
+                          <div>{isExpanded && <p>${event.valor}</p>}</div>
+                        )}
                       </div>
                     </div>
                   </div>
                 </>
               ) : (
-            
                 <>
-                
                   <div className="event-images">
                     <div
                       className={`fecha-hora ${
@@ -133,33 +141,37 @@ const Evento = ({ selectedLocation }) => {
                     >
                       <h1>{formatDate(event.fecha)}</h1>
                       <p>{formatTime(event.hora)} hs</p>
-                
-                   <div className="lugar-impar">
-                   <h3 >{event.lugar}</h3>
-            
-                   </div>
-           
+
+                      <div className="lugar-impar">
+                        <h3>{event.lugar}</h3>
+                        {selectedEvent === event && (
+                          <div>{isExpanded && <p>${event.valor}</p>}</div>
+                        )}
+                      </div>
                     </div>
 
-                  
-                    <img  className={`detective-evento ${
+                    <img
+                      className={`detective-evento ${
                         selectedEvent === event ? "expanded-detective" : ""
-                      }`} src={detective} alt="" />
-                    <img className={`quien-evento ${
+                      }`}
+                      src={detective}
+                      alt=""
+                    />
+                    <img
+                      className={`quien-evento ${
                         selectedEvent === event ? "expanded-quien" : ""
-                      }`}  src={quien} alt="" />
+                      }`}
+                      src={quien}
+                      alt=""
+                    />
                   </div>
                 </>
               )}
             </div>
 
-            {selectedEvent === event && (
+            {selectedEvent === event && isExpanded && (
               <div className="expanded-content">
-            
-              
-                <p className="descripcion">
-                  {event.descripcion} 
-                </p>
+                <p className="descripcion">{event.descripcion}</p>
                 <button onClick={(e) => handleBuyTicketClick(e)}>
                   {" "}
                   <a
@@ -167,7 +179,7 @@ const Evento = ({ selectedLocation }) => {
                     target="_blank"
                     className="comprar-link"
                   >
-                    Reservá tu lugar 
+                    Reservá tu lugar
                   </a>
                 </button>
               </div>
