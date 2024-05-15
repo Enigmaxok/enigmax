@@ -10,18 +10,32 @@ const ContactForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const confirmSend = window.confirm("¿Realmente deseas enviar este mensaje?");
     if (confirmSend) {
-   
-      e.target.submit();
+      try {
+        const response = await fetch("https://www.enigmax.com.ar/api/send-email", { // Actualiza la URL al endpoint en tu servidor
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        const data = await response.json();
+        alert(data.message);
+      } catch (error) {
+        console.error("Error al enviar el correo:", error);
+      }
     } else {
- 
       return;
     }
   };
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+console.log(formData)
   return (
     <div className="contact-ctn">
       <div className="contact-detective" style={{ marginTop: "5%" }}>
@@ -31,18 +45,13 @@ const ContactForm = () => {
       <div className="form-container" style={{ marginTop: "5%" }}>
         <h2>Contacto</h2>
         <div className="border"></div>
-        <form
-          className="contact-form"
-          action="https://formsubmit.co/enigmaxweb@gmail.com"
-          method="POST"
-          onSubmit={handleSubmit} 
-        >
+        <form className="contact-form" onSubmit={handleSubmit}>
           <label>Nombre:</label>
-          <input type="text" name="name" required />
+          <input type="text" name="name" onChange={handleChange} required />
           <label>Correo Electrónico:</label>
-          <input type="email" name="email" required />
+          <input type="email" name="email" onChange={handleChange} required />
           <label>Mensaje:</label>
-          <textarea name="message" required />
+          <textarea name="message" onChange={handleChange} required />
           <button type="submit">
             <img src={enviar} alt="" />
             <h3>Enviar</h3>
@@ -57,3 +66,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+ 
