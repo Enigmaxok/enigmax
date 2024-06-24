@@ -1,17 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 import detective from "../../assets/images/detective-evento.png";
 import quien from "../../assets/images/quien-asesino.svg";
 import "./modal.css";
 
 const Evento = ({ selectedLocation }) => {
-  const [events, setEvents] = useState([]);
-  const [selectedEvent, setSelectedEvent] = useState(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [state, setState] = useState({
+    events: [],
+    selectedEvent: null,
+    windowWidth: window.innerWidth,
+    isExpanded: false,
+  });
+
+  const { events, selectedEvent, windowWidth, isExpanded } = state;
+const handleEventSelect = useCallback((event) => {
+  setState((prevState) => ({
+    ...prevState,
+    selectedEvent: prevState.selectedEvent === event ? null : event,
+    isExpanded: prevState.selectedEvent === event ? !prevState.isExpanded : true,
+  }));
+}, []);
+
+  const handleBuyTicketClick = (event) => {
+    event.stopPropagation();
+  };
+
+  const fetchEvents = async () => {
+    try {
+      const response = await axios.get("https://www.enigmax.com.ar/api/eventos");
+      const eventosConColor = response.data.map((evento, index) => ({
+        ...evento,
+        color: coloresEvento[index % coloresEvento.length],
+      }));
+      setState((prevState) => ({ ...prevState, events: eventosConColor }));
+    } catch (error) {
+      console.error("Error al obtener los eventos:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
+
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setState((prevState) => ({ ...prevState, windowWidth: window.innerWidth }));
     };
 
     window.addEventListener("resize", handleResize);
@@ -20,33 +53,6 @@ const Evento = ({ selectedLocation }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const handleEventSelect = (event) => {
-    setSelectedEvent(selectedEvent === event ? null : event);
-    setIsExpanded(!isExpanded);
-  };
-
-  const handleBuyTicketClick = (event) => {
-    event.stopPropagation();
-  };
-
-  useEffect(() => {
-    const fetchEvents = async () => {
-      try {
-        const response = await axios.get(
-          "https://www.enigmax.com.ar/api/eventos"
-        );
-        const eventosConColor = response.data.map((evento, index) => ({
-          ...evento,
-          color: coloresEvento[index % coloresEvento.length],
-        }));
-        setEvents(eventosConColor);
-      } catch (error) {
-        console.error("Error al obtener los eventos:", error);
-      }
-    };
-
-    fetchEvents();
-  }, []);
 
   const coloresEvento = ["#262626", "#793535", "#61428C", "#553924"];
 
@@ -54,31 +60,24 @@ const Evento = ({ selectedLocation }) => {
     ? events.filter((event) => event.lugar === selectedLocation)
     : events;
 
-  const formatDate = (dateString) => {
+  const formatDate = useCallback((dateString) => {
     const dateObj = new Date(dateString);
     const day = dateObj.getDate() + 1;
     const month = dateObj.getMonth() + 1;
     const formattedDay = day < 10 ? `0${day}` : day;
     const formattedMonth = month < 10 ? `0${month}` : month;
-    const formattedDate = `${formattedDay}-${formattedMonth}`;
-    return formattedDate;
-  };
+    return `${formattedDay}-${formattedMonth}`;
+  }, []);
 
-  const formatTime = (timeString) => {
+  const formatTime = useCallback((timeString) => {
     const timeObj = new Date(`1970-01-01T${timeString}`);
     const hours = timeObj.getHours();
     const minutes = timeObj.getMinutes();
+    return `${hours}:${minutes.toString().padStart(2, "0")}`;
+  }, []);
 
-    let formattedTime = `${hours}:${minutes.toString().padStart(2, "0")}`;
+  const sortedEvents = filteredEvents.sort((a, b) => new Date(a.fecha) - new Date(b.fecha));
 
-    return formattedTime;
-  };
-
-  const sortedEvents = filteredEvents.sort((a, b) => {
-    const dateA = new Date(a.fecha);
-    const dateB = new Date(b.fecha);
-    return dateA - dateB;
-  });
   return (
     <div className="modal-body">
       {sortedEvents.map((event, index) => (
@@ -89,10 +88,9 @@ const Evento = ({ selectedLocation }) => {
           } ${selectedEvent === event ? "selected" : ""}`}
           style={{
             backgroundColor: event.color,
-            height:
-              selectedEvent === event
-                ? "450px"
-                : windowWidth < 650
+            height: selectedEvent === event
+              ? "450px"
+              : windowWidth < 650
                 ? "120px"
                 : "150px",
           }}

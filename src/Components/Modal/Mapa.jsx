@@ -35,7 +35,7 @@ const Mapa = ({ onNext }) => {
     mapInstance.fitBounds(bounds);
     setMap(mapInstance);
 
-    // Agregar marcador de usuario al mapa
+ 
     const userMarker = L.marker([0, 0], { icon: customIcon }).addTo(
       mapInstance
     );
@@ -108,7 +108,7 @@ const Mapa = ({ onNext }) => {
 
   useEffect(() => {
     if (map && selectedLocation) {
-      // Encuentra las coordenadas de la ubicación seleccionada
+   
       const selectedEvent = events.find(
         (event) => event.lugar === selectedLocation
       );
@@ -119,7 +119,7 @@ const Mapa = ({ onNext }) => {
           parsedCoordenadas[1]
         );
 
-        // Centra el mapa en la ubicación seleccionada
+
         map.setView(selectedLatLng, 13);
       }
     }
@@ -149,15 +149,15 @@ for (const event of events) {
     const marker = L.marker(parsedCoordenadas, { icon: customIcon2 }).addTo(
       map
     );
-    const popupWidth = window.innerWidth > 480 ? 300 : 200; // Cambia el tamaño del popup en función del ancho de la pantalla
+    const popupWidth = window.innerWidth > 480 ? 300 : 200; 
     marker.bindPopup(
       `<b>${event.nombre}</b><br />  <b>${event.lugar} - ${formatTime(
         event.hora
       )}hs</b> <br />  <b>${event.ubicacion}</b>       
       </b><br /><div style="height: 100px; overflow-y: auto;">${event.descripcion}</div>`,
       {
-        offset: L.point(0, -30), // Offset negativo en la dirección Y para mover el popup hacia arriba
-        maxWidth: popupWidth, // Establece el ancho máximo del popup
+        offset: L.point(0, -30), 
+        maxWidth: popupWidth, 
       }
     );
         marker.on("click", () => {
@@ -173,7 +173,7 @@ for (const event of events) {
   };
 
   useEffect(() => {
-    setShowAllEvents(!selectedLocation); // Si selectedLocation está vacío, mostrar todos los eventos
+    setShowAllEvents(!selectedLocation); 
     if (map && selectedLocation) {
       updateMarkers(selectedLocation);
     }
