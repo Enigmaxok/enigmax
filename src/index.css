@@ -16,12 +16,15 @@ code {
  ::-webkit-scrollbar {
     background: transparent;
     height: 8px;
-    width: 10px;
+    width: 8px;
+ 
 }
 ::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
     background: #B25FCC;
+    
 }
 ::-webkit-scrollbar-track {
     background: transparent;
+    
 }
