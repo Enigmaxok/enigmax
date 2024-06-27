@@ -200,7 +200,7 @@ for (const event of events) {
       {locationError && <div>Error: {locationError}</div>}
       <div
         id="map"
-        style={{ width: "100%", height: "300px", marginBottom: "25px" }}
+        style={{ width: "100%", height: "35vh", marginBottom: "20px", marginTop: "-15px" }}
       />
       <button className="siguiente" onClick={handleNext}>
         Siguiente

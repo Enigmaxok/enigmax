@@ -18,8 +18,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 7%;
     max-height: 550px;
-  height: 80vh;
-   
+ 
   overflow-y: scroll;
   
   
@@ -60,6 +59,7 @@
   align-items: center;
  
 }
+ 
 .modal-body select {
   width: 60%;
   margin-bottom: 40px;
@@ -296,6 +296,11 @@
   .expanded-detective {
     margin-top: -25px;
   }
+
+  .mapa-title h1, .mapa-title span {
+font-size: 1.5rem;
+ 
+}
 }
 @media only screen and (max-width:500px) {
   .evento-ctn {
