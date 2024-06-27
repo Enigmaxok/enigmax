@@ -17,6 +17,7 @@
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 7%;
+  
 }
 .fecha-hora h3{
   font-size: 14px;
@@ -42,7 +43,8 @@
 
 .modal-body {
   margin-top: 20px;
-  height: 550px;
+  max-height: 550px;
+  height: 80vh;
   width: 600px;
   overflow-y: scroll;
 }
@@ -51,6 +53,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+ 
 }
 .modal-body select {
   width: 60%;
@@ -350,6 +353,14 @@ margin-top: 25px;
 
 @media only screen and (max-height:720px) {
   .modal-content {
-     margin-top: 35%;
+     margin-top: 10%;
 }
+.modal-body {
+  max-height: 550px;
+  height: 70vh;
+ 
+}
+
+
+ 
 }
