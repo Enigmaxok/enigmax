@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors()); 
 app.use('/api', eventRoutes,keyRoutes ); // Prefix para las rutas de la API
 
-const PORT = process.env.PORT || 3306;s
+const PORT = process.env.PORT || 3306;
 
 app.listen(PORT, async () => {
   console.log(`Servidor escuchando en el puerto ${PORT}`);

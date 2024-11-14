@@ -2,7 +2,7 @@ import React from 'react';
 import wp from "../../assets/images/Wp.png";
 import './whatsapp.css'
 const Whatsapp =()=> {
-    const numeroTelefono = '+5491154942608';  
+    const numeroTelefono = '+5491172046762';  
 
     const abrirChatWhatsApp = () => {
       const url = `https://wa.me/${numeroTelefono}`;
