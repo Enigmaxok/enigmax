@@ -170,16 +170,11 @@ const handleEventSelect = useCallback((event) => {
             {selectedEvent === event && isExpanded && (
               <div className="expanded-content">
                 <p className="descripcion">{event.descripcion}</p>
-                <button onClick={(e) => handleBuyTicketClick(e)}>
-                  {" "}
-                  <a
-                    href={event.linkCompra}
-                    target="_blank"
-                    className="comprar-link"
-                  >
-                    Reservá tu lugar
-                  </a>
-                </button>
+                <a href="https://tickets.enigmaxoficial.com/" target="_blank" className="comprar-link">
+  <button>Reservá tu lugar</button>
+</a>
+``
+
               </div>
             )}
           </div>

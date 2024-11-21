@@ -30,7 +30,7 @@ const Intro = () => {
           <p>¡Viví una experiencia teatral única! Resolvé enigmas, interrogá sospechosos y descifra pistas para atrapar al asesino.</p>
         </div>
        
-        <button onClick={openModal}>Reservá tu lugar</button>
+        <button > <a href="https://tickets.enigmaxoficial.com/ " target="_blank">Reservá tu lugar</a> </button>
    
         {modalOpen && <Modal isOpen={modalOpen} onClose={closeModal} />}
       </div>
